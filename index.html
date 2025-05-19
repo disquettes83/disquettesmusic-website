@@ -275,56 +275,8 @@
         </div>
     </section>
     -->
-    <!-- Testimonials Section 
-    <section id="testimonials" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>testimonials</h2>
-                <p>What people say about working with disquette•s</p>
-            </div>
-            
-            <div class="testimonials-container">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        <p>Luigi was awesome!! I came to him with some references, lyrics, and a melody and he came up with an amazing beat that was exactly what I was looking for!</p>
-                    </div>
-                    <p class="testimonial-author">— Alex B. on SoundBetter</p>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        <p>Working with Luigi was a seamless and professional experience. He was quick to respond, always provided feedback, and responded to requests for changes quickly and professionally.</p>
-                    </div>
-                    <p class="testimonial-author">— Elizabeth on SoundBetter</p>
-                </div>
-                
-                <div class="testimonial-card hidden-testimonial" style="display: none;">
-                    <div class="testimonial-text">
-                        <p>Luigi è il migliore sotto ogni punto di vista: personale e professionale. Una persona squisita. appassionata del suo lavoro e soprattutto talentuoso!</p>
-                    </div>
-                    <p class="testimonial-author">— Andrea M. on SoundBetter</p>
-                </div>
-                
-                <div class="testimonial-card hidden-testimonial" style="display: none;">
-                    <div class="testimonial-text">
-                        <p>Luigi added great production to my track, and worked up a nice (and big!) mix and master. I was especially happy with the vocal processing.</p>
-                    </div>
-                    <p class="testimonial-author">— Craig C. on SoundBetter</p>
-                </div>
-                
-                <div class="testimonial-card hidden-testimonial" style="display: none;">
-                    <div class="testimonial-text">
-                        <p>I really got more than imagined. He really changed it into something completely different, and absolutely hit that 80ies retro wave style. Highly recommended! 10 out of 10!</p>
-                    </div>
-                    <p class="testimonial-author">— sterilecuckoo from Germany</p>
-                </div>
-                
-                <div class="testimonial-button">
-                    <button id="show-more-testimonials" class="btn btn-outline">View more reviews</button>
-                </div>
-            </div>
-        </div>
-    </section>-->
+
+
     
     <!-- Contact Section -->
     <section id="contact" class="section" style="background-color: #f5f5f5;">
@@ -383,7 +335,6 @@
     
 
     
-    <!-- Footer -->
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -444,26 +395,7 @@
             navLinks.classList.toggle('active');
         });
         
-        // Show more testimonials
-        const showMoreBtn = document.getElementById('show-more-testimonials');
-        const hiddenTestimonials = document.querySelectorAll('.hidden-testimonial');
-        let testimonialsVisible = false;
-        
-        showMoreBtn.addEventListener('click', () => {
-            if (!testimonialsVisible) {
-                hiddenTestimonials.forEach(testimonial => {
-                    testimonial.style.display = 'block';
-                });
-                showMoreBtn.textContent = 'View less';
-                testimonialsVisible = true;
-            } else {
-                hiddenTestimonials.forEach(testimonial => {
-                    testimonial.style.display = 'none';
-                });
-                showMoreBtn.textContent = 'View more reviews';
-                testimonialsVisible = false;
-            }
-        });
+
         
        // Script per il menu di navigazione fisso
 document.addEventListener('DOMContentLoaded', function() {
