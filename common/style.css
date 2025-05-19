@@ -123,6 +123,7 @@ header {
     position: relative;
 }
 
+/* Stile per il container del logo */
 .logo-container {
     display: flex;
     align-items: center;
@@ -130,6 +131,7 @@ header {
     margin-bottom: var(--space-lg);
 }
 
+/* Stile per il logo principale */
 .logo {
     font-size: 2rem;
     font-weight: 700;
@@ -139,6 +141,24 @@ header {
     flex-direction: column;
 }
 
+
+/* Stile per il contenuto del logo con l'immagine */
+.logo span {
+    display: flex;
+    align-items: center; /* Allinea verticalmente l'immagine e il testo */
+    gap: 10px; /* Spazio tra l'immagine e il testo */
+}
+
+/* Stile specifico per l'immagine del logo */
+.logo img {
+    width: 42px; 
+    height: 42px;
+    display: inline-block; /* Importante per mantenerla inline con il testo */
+    vertical-align: middle;
+    margin-right: 6px; /* Piccolo spazio aggiuntivo */
+}
+
+/* Stile per il sottotitolo */
 .logo .sub {
     font-size: 0.9rem;
     color: var(--secondary);
@@ -148,7 +168,7 @@ header {
 .cursor {
     display: inline-block;
     width: 8px;
-    height: 18px;
+    height: 20px;
     background-color: var(--primary);
     animation: blink 1s step-end infinite;
     margin-left: 5px;
@@ -760,148 +780,15 @@ section {
     box-shadow: var(--shadow);
 }
 
-.player-controls {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-}
 
-.control-button {
-    background: none;
-    border: none;
-    color: var(--dark);
-    font-size: 1rem;
-    cursor: pointer;
-    transition: var(--transition);
-}
 
-.control-button:hover {
-    color: var(--primary);
-}
 
-.control-button.play-pause {
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-}
 
-.control-button.play-pause:hover {
-    background-color: var(--dark);
-    transform: scale(1.05);
-}
 
-.progress-container {
-    flex: 1;
-    max-width: 500px;
-}
 
-.progress-bar {
-    width: 100%;
-    height: 6px;
-    background-color: #eee;
-    position: relative;
-    cursor: pointer;
-    border-radius: 3px;
-}
 
-.progress {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background-color: var(--primary);
-    border-radius: 3px;
-}
 
-.time-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    margin-top: 5px;
-    font-family: var(--font-mono);
-}
 
-.track-info-display {
-    text-align: center;
-    margin-top: var(--space-md);
-}
-
-.track-title-display {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: var(--space-xs);
-}
-
-.track-artist-display {
-    font-size: 1rem;
-    color: var(--secondary);
-}
-
-/* Music Player (bottom) */
-.music-player {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(17, 17, 17, 0.95);
-    color: white;
-    padding: var(--space-md);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transform: translateY(100%);
-    transition: transform 0.4s ease;
-}
-
-.music-player.active {
-    transform: translateY(0);
-}
-
-.now-playing {
-    flex: 1;
-    margin-right: var(--space-md);
-}
-
-.track-info {
-    display: flex;
-    align-items: center;
-}
-
-.track-thumbnail {
-    width: 60px;
-    height: 60px;
-    border-radius: var(--radius);
-    overflow: hidden;
-    margin-right: var(--space-md);
-}
-
-.track-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.track-details {
-    flex: 1;
-}
-
-.track-name {
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.track-date {
-    font-size: 0.8rem;
-    color: var(--secondary);
-}
 
 /* Library Section */
 .library-section {
@@ -935,13 +822,7 @@ section {
     font-family: var(--font-main);
 }
 
-.library-search button {
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    padding: 0 var(--space-md);
-    cursor: pointer;
-}
+
 
 .track-list {
     display: flex;
@@ -1003,18 +884,6 @@ section {
     gap: var(--space-md);
 }
 
-.track-action-btn {
-    background: none;
-    border: none;
-    color: var(--secondary);
-    cursor: pointer;
-    transition: var(--transition);
-    font-size: 1.1rem;
-}
-
-.track-action-btn:hover {
-    color: var(--primary);
-}
 
 /* Playlist Section */
 .playlist-section {
@@ -1151,6 +1020,7 @@ footer {
 }
 
 .footer-logo {
+    margin-top: 15px;
     margin-bottom: var(--space-md);
     color: white;
     display: inline-block;
@@ -1205,11 +1075,12 @@ footer {
 
 .copyright {
     margin-top: var(--space-xl);
-    text-align: center;
+    text-align: left;
     font-size: 0.9rem;
     opacity: 0.7;
     padding-top: var(--space-lg);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+
 }
 .sticky-nav {
     position: fixed;
@@ -1253,6 +1124,93 @@ footer {
 /* Aggiungi padding in cima al body per compensare l'altezza del menu fisso */
 body.has-sticky-nav {
     padding-top: 80px; /* Regola questo valore in base all'altezza effettiva del menu */
+}
+
+
+/* Video Section */
+.video-section {
+    padding: var(--space-xl) 0;
+    background-color: #f8f9fa; /* Sfondo leggermente diverso per distinguere la sezione */
+}
+
+/* Titolo della sezione */
+.video-section .playlist-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+}
+
+.video-section .playlist-header h2 {
+    font-size: 1.75rem;
+    position: relative;
+    padding-bottom: var(--space-sm);
+    margin-top: 0;
+    text-transform: lowercase;
+}
+
+.video-section .playlist-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+/* Griglia video */
+.video-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-grid p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    text-align: center;
+    color: var(--secondary);
+}
+
+/* Contenitore video responsivo */
+.video-grid iframe {
+    width: 80%;
+    aspect-ratio: 4 / 3; /* Mantiene il rapporto d'aspetto */
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Opzionale: decorazione */
+.video-section::before {
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 5rem;
+    color: rgba(0, 0, 0, 0.03);
+    z-index: 0;
+}
+
+/* Stile per più video */
+.video-grid.multiple {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    align-items: start;
+}
+
+.video-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Responsive Styles */

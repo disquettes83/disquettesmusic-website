@@ -9,12 +9,22 @@
     <meta name="description" content="disquette•s - Electronic music producer. Discover the latest productions, remixes and collaboration opportunities.">
     <meta name="keywords" content="disquette•s, electronic music, producer, dj, house, chillwave, synthwave, retro, retrowave, 80s, italo disco, synth pop, remix, collaboration, production">
     <meta name="theme-color" content="#ff0066">
+
+    <!-- Canonical e link autore -->
+    <link rel="canonical" href="https://disquettesmusic.netlify.app/collaborate/" />
+    <link rel="author" title="about the author" href="https://disquettesmusic.netlify.app/" />
+    
+    <!-- Favicon e icone -->
+    <link rel="icon" sizes="16x16" href="/images/favicon.png" type="image/png" />
+    <link rel="icon" sizes="32x32" href="/images/favicon.png" type="image/png" />
+    <link rel="icon" sizes="128x128" href="/images/favicon-128x128.png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
     
     <!-- Social media meta tags -->
     <meta property="og:title" content="disquette•s | Electronic Music Producer">
     <meta property="og:description" content="Original electronic music productions, remixes and collaborations.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://disquettes.netlify.app/images/LOGO-disquettes.png">
+    <meta property="og:image" content="https://disquettesmusic.netlify.app/images/LOGO-disquettes.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +37,22 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="common/style.css">
     
+    <!-- Schema.org per i motori di ricerca -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "disquette•s",
+      "url": "https://disquettesmusic.netlify.app/collaborate/",
+      "image": "https://disquettesmusic.netlify.app/images/disquettes-social.jpg",
+      "description": "Produttore di musica elettronica",
+      "genre": ["Electronic", "Synthwave", "Retrowave", "Chillwave", "House"],
+      "sameAs": [
+        "https://soundcloud.com/disquettes",
+        "https://open.spotify.com/intl-it/artist/0l0cLSyeAbCRXY4sxkH9kl"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -35,7 +61,7 @@
         <div class="container">
             <div class="logo-container">
                 <div class="logo">
-                    <span>disquette•s</span>
+                    <span><img src="./images/favicon-128x128.png" alt="Logo"> disquette•s</span>
                     <span class="sub"></span>
                 </div>
                 <span class="cursor"></span>
@@ -79,8 +105,8 @@
                 </div>
                 <div class="about-content">
                     <h2>about disquette•s</h2>
-                    <p>Italian producer crafting electronic music since 2005. With a unique blend of Chillwave, New Wave, Synth-pop, and Italo-disco influences, disquette•s creates immersive sonic landscapes that transport listeners to neon-lit streets and retro-futuristic worlds.</p>
-                    <p>Each production features meticulously crafted sounds and arrangements that balance nostalgic elements with contemporary production techniques.</p>
+                    <p>An Italian Chillwave/Retrowave solo act. A passionate digger of more or less obscure records from the past, ranging from punk, post-punk, new wave, synth pop, and videogame music to the cheesiest italo disco and eurodance. All of it, in one way or another, influences his own productions.</p>
+                    <p>Started messing around with computer music as a kid on a glorious Commodore Amiga 600 in the mid-'90s. Got more serious with trackers, then moved on to Fruity Loops in the early 2000s. Has been producing professionally for over 15 years.</p>
                 </div>
             </div>
         </div>
@@ -91,7 +117,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>discography</h2>
-                <p>Explore the latest releases and tracks</p>
+                <p>Latest releases and tracks</p>
             </div>
             
             <div class="discography-grid">
@@ -215,7 +241,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>collaboration</h2>
-                <p>Professional audio services for artists and brands</p>
+                <p>Audio services for artists and brands</p>
             </div>
             
             <div class="services-grid">
@@ -355,55 +381,19 @@
         </div>
     </section>
     
-    <!-- Music Player -->
-    <div id="music-player" class="music-player">
-        <div class="track-info">
-            <div class="track-thumbnail">
-                <img src="./images/covers/wecangoon.jpg" alt="Track thumbnail">
-            </div>
-            <div class="track-details">
-                <div class="track-title">We Can Go On</div>
-                <div class="track-artist">disquette•s</div>
-            </div>
-        </div>
-        
-        <div class="player-controls">
-            <button class="control-button">
-                <i class="fas fa-step-backward"></i>
-            </button>
-            <button class="control-button play-pause">
-                <i class="fas fa-play"></i>
-            </button>
-            <button class="control-button">
-                <i class="fas fa-step-forward"></i>
-            </button>
-        </div>
-        
-        <div class="progress-container">
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
-            <div class="time-info">
-                <span class="current-time">0:00</span>
-                <span class="duration">3:45</span>
-            </div>
-        </div>
-        
-        <div class="volume-container">
-            <i class="fas fa-volume-up volume-icon"></i>
-            <input type="range" class="volume-slider" min="0" max="100" value="80">
-        </div>
-    </div>
+
     
+    <!-- Footer -->
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <div class="logo footer-logo">
-                        <span>disquette•s</span>
+                        <span><img src="./images/favicon-128x128.png" alt="Logo"> disquette•s</span>
                     </div>
-                    <p>Electronic music producer since 2005.<br>Chillwave, Italo-disco, Synth-pop.</p>
+
+              
                     <div class="footer-social">
                         <a href="https://disquette-s.bandcamp.com/" target="_blank" class="social-icon">
                             <i class="fab fa-bandcamp"></i>
@@ -439,7 +429,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2025 disquette•s | Design by disquette•s | Creative Commons: Attribution Non-Commercial Share-Alike</p>
+                <p>&copy; Design by disquette•s</p>
             </div>
         </div>
     </footer>
