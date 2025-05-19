@@ -219,10 +219,13 @@ nav {
 /* Hero Section */
 .hero {
     padding: var(--space-xl) 0;
-    background: linear-gradient(135deg, #111 0%, #333 100%);
-    color: white;
+    color: var(--);
     position: relative;
     overflow: hidden;
+    height: 100vh;
+    background-image: linear-gradient(135deg, rgba(43, 255, 0, 0.25),
+                                                rgba(255, 255, 255, 1),
+                                                rgba(229, 255, 0, 0.25));
 }
 
 .hero::before {
@@ -232,8 +235,6 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/images/background-1400x400.png') no-repeat center center/cover;
-    opacity: 1.0;
     z-index: 1;
 }
 
@@ -271,9 +272,11 @@ nav {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, #111 0%, #333 100%);
-    background: url('/images/background-1400x400.png') no-repeat center center/cover;
-    color: white;
+    background: linear-gradient(135deg, rgba(43, 255, 0, 0.25),
+                                                rgba(255, 255, 255, 1),
+                                                rgba(229, 255, 0, 0.25));
+
+    color: var(--dark);
     padding: var(--space-xl) 0;
     position: relative;
     overflow: hidden;
@@ -446,8 +449,9 @@ section {
 }
 
 /* Services Section */
-.services-section {
+#services {
     padding: var(--space-xl) 0;
+
 }
 
 .services-grid {
@@ -458,7 +462,9 @@ section {
 }
 
 .service-card {
-    background-color: white;
+    background: linear-gradient(135deg, rgba(43, 255, 0, 0.25),
+                                                rgba(255, 255, 255, 1),
+                                                rgba(229, 255, 0, 0.25));
     border-radius: var(--radius);
     padding: var(--space-lg);
     box-shadow: var(--shadow);
@@ -664,11 +670,15 @@ section {
 
 .contact-card {
     flex: 1 1 300px;
-    background-color: white;
+    background-image: linear-gradient(135deg, rgba(43, 255, 0, 0.2),
+                                                rgba(255, 255, 255, 1),
+                                                rgba(229, 255, 0, 0.2));
     border-radius: var(--radius);
     padding: var(--space-lg);
     box-shadow: var(--shadow);
 }
+
+
 
 .contact-heading {
     font-size: 1.2rem;
@@ -1207,7 +1217,7 @@ footer {
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 1); /* Sfondo leggermente trasparente */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+    box-shadow: 0 0px 0px rgba(229, 255, 0, 0.25);
     z-index: 1000; /* Assicura che sia sopra altri elementi */
     padding: var(--space-sm) 0;
     backdrop-filter: blur(10px); /* Effetto sfocatura per lo sfondo */
