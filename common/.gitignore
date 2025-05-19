@@ -1,0 +1,21 @@
+# File di sistema
+.DS_Store
+Thumbs.db
+
+# Directory node_modules
+node_modules/
+
+# File di build
+dist/
+build/
+
+# File di ambiente
+.env
+.env.local
+
+# Log
+*.log
+
+# Editor specifici
+.vscode/
+.idea/
