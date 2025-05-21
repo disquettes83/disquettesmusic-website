@@ -60,11 +60,12 @@
 <body>
     <!-- Header -->
     <header id="header">
-        <div class="container">
+    <div class="container">
+        <div class="header-inner">
             <div class="logo-container">
                 <div class="logo">
                     <span><img src="./images/favicon-128x128.png" alt="Logo"> disquette•s</span>
-
+                    <span class="sub"></span>
                 </div>
                 <span class="cursor"></span>
             </div>
@@ -78,10 +79,47 @@
                     <li><a href="index.html">home</a></li>
                     <li><a href="collaborate.html">collaborate</a></li>
                     <li><a href="music.html" class="active">music</a></li>
+                    
+                    <!-- Contenitore per le icone social nel menu mobile -->
+                    <li class="mobile-social-container">
+                        <div class="mobile-social-divider"></div>
+                        <div class="mobile-social-title">Follow</div>
+                        <div class="mobile-social-icons">
+                            <a href="https://disquette-s.bandcamp.com/" target="_blank" class="social-icon-mobile">
+                                <i class="fab fa-bandcamp"></i>
+                            </a>
+                            <a href="https://open.spotify.com/intl-it/artist/0l0cLSyeAbCRXY4sxkH9kl" target="_blank" class="social-icon-mobile">
+                                <i class="fab fa-spotify"></i>
+                            </a>
+                            <a href="https://soundcloud.com/disquettes" target="_blank" class="social-icon-mobile">
+                                <i class="fab fa-soundcloud"></i>
+                            </a>
+                            <a href="https://www.instagram.com/disquettepop/" target="_blank" class="social-icon-mobile">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
+            
+            <!-- Icone social nella versione desktop (nascoste su mobile) -->
+            <div class="header-social desktop-only">
+                <a href="https://disquette-s.bandcamp.com/" target="_blank" class="social-icon-header">
+                    <i class="fab fa-bandcamp"></i>
+                </a>
+                <a href="https://open.spotify.com/intl-it/artist/0l0cLSyeAbCRXY4sxkH9kl" target="_blank" class="social-icon-header">
+                    <i class="fab fa-spotify"></i>
+                </a>
+                <a href="https://soundcloud.com/disquettes" target="_blank" class="social-icon-header">
+                    <i class="fab fa-soundcloud"></i>
+                </a>
+                <a href="https://www.instagram.com/disquettepop/" target="_blank" class="social-icon-header">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Page Header -->
     <section class="page-header">

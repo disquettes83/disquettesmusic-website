@@ -123,18 +123,47 @@ header {
     position: relative;
 }
 
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
 /* Stile per il container del logo */
 .logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: var(--space-lg);
+    margin-bottom: 0px;
 }
+
+.header-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-icon-header {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    color: var(--secondary);
+
+    font-size: 0.9rem;
+}
+
+
 
 /* Stile per il logo principale */
 .logo {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 500;
     color: var(--dark);
     margin-right: var(--space-sm);
     display: flex;
@@ -151,8 +180,8 @@ header {
 
 /* Stile specifico per l'immagine del logo */
 .logo img {
-    width: 42px; 
-    height: 42px;
+    width: 32px; 
+    height: 32px;
     display: inline-block; /* Importante per mantenerla inline con il testo */
     vertical-align: middle;
     margin-right: 6px; /* Piccolo spazio aggiuntivo */
@@ -185,10 +214,13 @@ header {
 }
 
 nav {
+    margin-bottom: 0;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
 
 }
+
 
 .nav-links {
     display: flex;
@@ -220,7 +252,8 @@ nav {
 
 .nav-links a:hover::after,
 .nav-links a.active::after {
-    width: 100%;
+    width: 0%;
+    left: 10px;
 }
 
 .nav-links a.active {
@@ -1010,7 +1043,7 @@ footer {
 
 .social-icon:hover {
     background-color: var(--primary);
-    transform: translateY(-3px);
+
 }
 
 .footer-heading {
@@ -1046,7 +1079,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 
 }
-.sticky-nav {
+.sticky-nav .header-inner {
     position: fixed;
     top: 0;
     left: 0;
@@ -1054,10 +1087,114 @@ footer {
     background-color: rgba(255, 255, 255, 1); /* Sfondo leggermente trasparente */
     box-shadow: 0 0px 0px rgba(229, 255, 0, 0.25);
     z-index: 1000; /* Assicura che sia sopra altri elementi */
-    padding: var(--space-sm) 0;
+    padding: var(--space-sm) 8px;
     backdrop-filter: blur(10px); /* Effetto sfocatura per lo sfondo */
     -webkit-backdrop-filter: blur(10px);
     transition: transform 0.3s ease;
+}
+
+
+
+.sticky-nav .social-icon-header {
+    width: 32px;
+    height: 32px;
+
+}
+
+/* Nascondi il contenitore mobile social su desktop */
+.mobile-social-container {
+    display: none;
+}
+
+/* Mantieni visibili le icone desktop solo su desktop */
+.desktop-only {
+    display: flex;
+}
+
+/* Stile per le icone social in formato mobile */
+.social-icon-mobile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    color: var(--secondary);
+
+
+    margin: 10px 5px;
+}
+
+
+
+/* Divisore per il menu mobile */
+.mobile-social-divider {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    width: 100%;
+}
+
+.mobile-social-title {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.mobile-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0px;
+}
+
+/* Media queries per responsive */
+@media (max-width: 768px) {
+    /* Nascondi le icone desktop su mobile */
+    .desktop-only {
+        display: none;
+    }
+    
+    /* Mostra il contenitore per le icone social su mobile */
+    .mobile-social-container {
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    /* Stili per il menu mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        right: 0;
+        background-color: white;
+        box-shadow: var(--shadow);
+        z-index: 100;
+        padding: var(--space-md) var(--space-lg);
+        padding-bottom: var(--space-lg);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 0px 0px;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 0px 10px;
+        font-size: 1.1rem;
+    }
 }
 
 /* Quando la navigazione è fissa, usiamo un layout diverso per compattarla */
