@@ -142,7 +142,7 @@ header {
 .header-social {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0px;
 }
 
 .social-icon-header {
