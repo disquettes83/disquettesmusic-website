@@ -197,10 +197,10 @@ header {
 .cursor {
     display: inline-block;
     width: 8px;
-    height: 20px;
+    height: 16px;
     background-color: var(--primary);
     animation: blink 1s step-end infinite;
-    margin-left: 5px;
+    margin-left: 0px;
     vertical-align: middle;
 }
 
